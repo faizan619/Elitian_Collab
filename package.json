@@ -1,0 +1,17 @@
+{
+  "name": "elitian_collab",
+  "version": "1.0.0",
+  "description": "this webapp going to be something special which even the admin doesn't know.just wait",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm start",
+    "both": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
