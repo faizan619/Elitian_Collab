@@ -1,14 +1,37 @@
-const express = require('express')
+const dotenv = require('dotenv');
+dotenv.config({path:'./config.env'});
+const express = require('express');
 const app = express();
-const dotenv = require('dotenv')
-const mongoose = require('mongoose')
+const port = process.env.PORT;
 
-const DB = ""
+require('./database/conn');
 
-mongoose.connect(DB)
-.then(()=>{
-    console.log("DataBase Connected")
+/*
+app.use(cors()); 
+app.use(express.json()); 
+app.use(require('./router/auth'));
+ */
+app.use(express.json());
+
+
+app.get('/',(req,res)=>{
+    res.send('Welcome to Backend File')
 })
-.catch((err)=> {
-    console.log(`There is an error : ${err}`)
+
+app.post('/upload', async (req,res)=>{
+    const {name,email} = req.body;
+    if(!name || !email){
+        return res.status(400).send("Please Fill The Details");
+    }
+    // try{
+    //     const userExist = await User.findOne({email:email});
+    // }
+    // catch(err){
+    //     console.log(err)
+    // }
+
+})
+
+app.listen(port,()=>{
+    console.log(`localhost:${port}`)
 })
