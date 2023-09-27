@@ -1,8 +1,14 @@
 const express = require('express')
 const app = express();
+const dotenv = require('dotenv')
 const mongoose = require('mongoose')
-//username : faizanalam
-//password : g64zIyZetMbGlzND
-//connector : mongodb+srv://faizanalam:<password>@elitiancollab.6lq5vd9.mongodb.net/?retryWrites=true&w=majority
 
-// mongodb+srv://faizanalam:g64zIyZetMbGlzND@elitiancollab.6lq5vd9.mongodb.net/elitian_collab?retryWrites=true&w=majority
+const DB = ""
+
+mongoose.connect(DB)
+.then(()=>{
+    console.log("DataBase Connected")
+})
+.catch((err)=> {
+    console.log(`There is an error : ${err}`)
+})
