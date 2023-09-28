@@ -41,4 +41,8 @@
 button{
   height: 2rem;
   text-transform: uppercase;
+  background-color: cadetblue;
+  color: white;
+  border-radius: .5rem;
+  padding: 0 1rem;
 }
