@@ -1,6 +1,19 @@
 import React from 'react'
+import {useAddTransaction} from '../../hooks/useAddTransaction'
 
 function ExpenseTracker() {
+
+    const {addTransaction} = useAddTransaction();
+
+    const submitnow = (e) =>{
+        e.preventDefault()
+        addTransaction({
+            description:"Going to college",
+            transactionAmount: 50,
+            transactionType:'expense',
+        })
+    }
+
   return (
     <>
         <div className="expense-tracker">
@@ -20,7 +33,7 @@ function ExpenseTracker() {
                         <p>$0.00</p>
                     </div>
                 </div>
-                <form action="" className="add-transaction">
+                <form className="add-transaction" onSubmit={submitnow}>
                     <input type="text" placeholder="Add Transaction" required/>
                     <input type="number" placeholder="Add Amount" required/>
                     <input type="radio" id='expense' value='expense' />
@@ -33,7 +46,7 @@ function ExpenseTracker() {
             </div>
         </div>
         <div className="transaction">
-            
+
         </div>
     </>
   )

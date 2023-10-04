@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider} from 'firebase/auth'
 import { getAnalytics } from "firebase/analytics";
+import {getFirestore} from 'firebase/firestore'
+
 const firebaseConfig = {
   apiKey: "AIzaSyARM2mKeVpuvAxHTMevbuY8sBkU3T6JANI",
   authDomain: "expense-tracker-app1.firebaseapp.com",
@@ -17,3 +19,4 @@ const analytics = getAnalytics(app);
 
 export const auth = getAuth(app)
 export const provider = new GoogleAuthProvider()
+export const db = getFirestore(app)
