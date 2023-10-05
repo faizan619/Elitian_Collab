@@ -89,5 +89,44 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script>
+        gsap.from(".rightcontent img",{
+            y:100,
+            opacity:0,
+            duration:2
+        })
+        gsap.from('nav',{
+            opacity:0,
+            duration:2,
+            scale:2
+        })
+        var t1 = gsap.timeline();
+        t1.from('.leftcontent h2',{
+            y:100,
+            duration:2,
+            opacity:0,
+        })
+        .from('.leftcontent h1',{
+            y:70,
+            opacity:0,
+            duration:1,
+        })
+        .from('.leftcontent p',{
+            opacity:0,
+            scale:2,
+            duration:1,
+        })
+        .from('.leftcontent button',{
+            scale:1.1,
+            opacity:0,
+        })
+        .to('.leftcontent button',{
+            y:5,
+            yoyo:true,
+            repeat:-1,
+        })
+    </script>
 </body>
 </html>
