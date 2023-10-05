@@ -4,8 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        li{
+            list-style: none;
+        }
+        .container{
+            background-color: lightgray;
+        }
+        nav{
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            padding-left: 2rem;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
+        .content{
+            display: flex;
+            height: calc(100vh - 4rem);
+        }
+        .content .leftcontent h1{
+            font-size: 2.5em;
+            color: blue;
+        }
+        .content .leftcontent p{
+            width: 80%;
+        }
+        .content .leftcontent{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1rem;
+            text-align: left;
+            padding: 0 0 0 3rem;
+        }
+        .content .rightcontent{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content .rightcontent img{
+            width: 35rem;
+        }
+        button{
+            padding: 10px 30px;
+            background: linear-gradient(45deg, blue,darkblue);
+            color: white;
+            font-weight: bold;
+            border-radius: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background: linear-gradient(-45deg, blue,darkblue);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <nav>
+            <ul id='menu'>
+                <a href="/"><li>Home</li></a>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="leftcontent">
+                <h2>We Are Here For Your Care</h2>
+                <h1>Thyroid Disease Prediction</h1>
+                <p>Your thyroid creates and produces hormones that play a role in many different systems throughout your body. When your thyroid makes either too much or too little of these important hormones, it's is called a thyroid Disease.There are several different types of disease, including hyperthyroidism, hypothyroidism,thyroiditis and Hashimoto's thyroiditis.</p>
+                <a href="#"><button>PREDICT</button></a>
+            </div>
+            <div class="rightcontent">
+                <img src="./Hospital patient-bro (1).png" alt="patient photo">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
