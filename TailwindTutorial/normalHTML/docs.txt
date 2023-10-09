@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="">
+    <p class="w-[100%] background-color">first class</p>
+</body>
+</html>
+
+    Breakpoint	    min-width
+    sm	            640px
+    md	            768px
+    lg	            1024px
+    xl	            1280px
+    2xl	            1536px
+
+padding: 
+    px-1            py-1
+    px-40           py-40
+
+margin:
+    mx-1            my-1
+    mx-40           my-40
+
+box sizing:         box-border
+                    box-content
+
+<p class="px-40">padding px-40</p>
+<p class="py-10">padding py-10</p>
+<p class="mx-40">Margin mx-40</p>
+<p class="my-20">margin my-20</p>
+<p class="box-border">box sizing-border box</p>
+<p class="text-green-500 text-4xl font-bold uppercase h-40 w-48 bg-blue-800 border-black">text styling</p>
