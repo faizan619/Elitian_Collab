@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prac1</title>
+</head>
+<body>
+    <h1 align="center"> Arithmetic Operations </h1>
+    <form name="arithmetic">
+    <table border="1" align="center">
+    <tr>
+    <td>Number 1: </td>
+    <td><input id="inp1" type="text" name="n1" size="20"></td>
+    </tr>
+    <tr>
+    <td>Number 2: </td>
+    <td><input id="inp2" type="text" name="n2" size="20"></td>
+    </tr>
+    <tr>
+    <td colspan=2>
+    <input type="button" name="add" value="Add"
+    onclick="addition();">&nbsp;
+    <input type="button" name="sub" value="Subtract"
+    onclick="subtraction();">&nbsp;
+    <input type="button" name="mul" value="Multiply"
+    onclick="multiplication();">&nbsp;
+    <input type="button" name="div" value="Divide"
+    onclick="division();">&nbsp;
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2">Result is: <input type="text" id="result" name="res" size="20"
+    value=""></td>
+
+    </tr>
+    </table>
+    </form>
+
+    <script>
+        function addition(){
+            var n1 = parseInt(document.getElementById("inp1").value);
+            var n2 = parseInt(document.getElementById("inp2").value);
+            var res = n1+n2;
+            document.getElementById("result").value = res;
+        }
+        function subtraction(){
+            var n1 = parseInt(document.getElementById("inp1").value);
+            var n2 = parseInt(document.getElementById("inp2").value);
+            var res = n1-n2;
+            document.getElementById("result").value = res;
+        }
+        function multiplication(){
+            var n1 = parseInt(document.getElementById("inp1").value);
+            var n2 = parseInt(document.getElementById("inp2").value);
+            var res = n1*n2;
+            document.getElementById("result").value = res;
+        }
+        function division(){
+            var n1 = parseInt(document.getElementById("inp1").value);
+            var n2 = parseInt(document.getElementById("inp2").value);
+            var res = n1/n2;
+            document.getElementById("result").value = res;
+        }
+    </script>
+</body>
+</html>
